@@ -94,14 +94,23 @@
       -moz-osx-font-smoothing: grayscale;
     }
     
-    .icon-arrow:before {
+    .icon-address:before {
       content: "\EA01";
     }
-    .icon-mail:before {
+    .icon-arrow:before {
       content: "\EA02";
     }
-    .icon-phone:before {
+    .icon-mail:before {
       content: "\EA03";
+    }
+    .icon-people:before {
+      content: "\EA04";
+    }
+    .icon-phone:before {
+      content: "\EA05";
+    }
+    .icon-time:before {
+      content: "\EA06";
     }
   </style>
 </head>
@@ -116,8 +125,16 @@
   <ul class="icons-list">
     
     <li class="icon-box">
-      <input class="icon-class-name autoselect" type="text" value=".icon-arrow" readonly>
+      <input class="icon-class-name autoselect" type="text" value=".icon-address" readonly>
       <input class="icon-unicode autoselect" type="text" value="\EA01" readonly>
+      <div class="icon-container">
+        <i class="icon icon-address"></i>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-arrow" readonly>
+      <input class="icon-unicode autoselect" type="text" value="\EA02" readonly>
       <div class="icon-container">
         <i class="icon icon-arrow"></i>
       </div>
@@ -125,17 +142,33 @@
     
     <li class="icon-box">
       <input class="icon-class-name autoselect" type="text" value=".icon-mail" readonly>
-      <input class="icon-unicode autoselect" type="text" value="\EA02" readonly>
+      <input class="icon-unicode autoselect" type="text" value="\EA03" readonly>
       <div class="icon-container">
         <i class="icon icon-mail"></i>
       </div>
     </li>
     
     <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-people" readonly>
+      <input class="icon-unicode autoselect" type="text" value="\EA04" readonly>
+      <div class="icon-container">
+        <i class="icon icon-people"></i>
+      </div>
+    </li>
+    
+    <li class="icon-box">
       <input class="icon-class-name autoselect" type="text" value=".icon-phone" readonly>
-      <input class="icon-unicode autoselect" type="text" value="\EA03" readonly>
+      <input class="icon-unicode autoselect" type="text" value="\EA05" readonly>
       <div class="icon-container">
         <i class="icon icon-phone"></i>
+      </div>
+    </li>
+    
+    <li class="icon-box">
+      <input class="icon-class-name autoselect" type="text" value=".icon-time" readonly>
+      <input class="icon-unicode autoselect" type="text" value="\EA06" readonly>
+      <div class="icon-container">
+        <i class="icon icon-time"></i>
       </div>
     </li>
     

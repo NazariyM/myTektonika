@@ -1,29 +1,38 @@
 // variables
 $accent: #F6AF47
+
 // fonts
-//+font(Roboto-Regular, Roboto-Regular)
-//+font(Roboto-Medium, Roboto-Medium)
-//+font(Roboto-Bold, Roboto-Bold)
-//+font(Roboto-Black, Roboto-Black)
-//+font(SFUIText-Regular, SFUIText-Regular)
-//
-//$default-fonts: Arial, sans-serif
-//
-//=roboto-reg
-//	font-family: Roboto-Regular, $default-fonts
-//
-//=roboto-med
-//	font-family: Roboto-Medium, $default-fonts
-//
-//=roboto-bold
-//	font-family: Roboto-Bold, $default-fonts
-//
-//=roboto-black
-//	font-family: Roboto-Black, $default-fonts
-//
-//=sf-ui-text
-//	font-family: SFUIText-Regular, $default-fonts
++font(Roboto-Regular, Roboto-Regular)
++font(Roboto-Bold, Roboto-Bold)
++font(Roboto-Light, Roboto-Light)
++font(RobotoCondensed-Regular, RobotoCondensed-Regular)
++font(RobotoCondensed-Light, RobotoCondensed-Light)
++font(RobotoCondensed-Bold, RobotoCondensed-Bold)
+
+$default-fonts: Arial, sans-serif
+
+=roboto-reg
+	font-family: Roboto-Regular, $default-fonts
+
+=roboto-light
+	font-family: Roboto-Light, $default-fonts
+
+=roboto-bold
+	font-family: Roboto-Bold, $default-fonts
+
+=robCond-reg
+	font-family: RobotoCondensed-Regular, $default-fonts
+
+=robCond-light
+	font-family: RobotoCondensed-Light, $default-fonts
+
+=robCond-bold
+	font-family: RobotoCondensed-Bold, $default-fonts
+
+
+
 // base transition
+
 =trs
 	transition: all .25s ease-in-out
 
@@ -33,11 +42,10 @@ body
 	display: flex
 	flex-direction: column
 	min-width: 320px
-	font-family: 'Roboto Condensed', Arial, sans-serif
-	font-weight: 300
 	font-size: 18px
 	line-height: 1.2
 	color: #747377
+	+robCond-light
 
 .wrapper
 	flex: 1 0 auto
@@ -59,6 +67,7 @@ body
 	text-decoration: none
 	outline: none
 	text-transform: uppercase
+	border-radius: 10px
 	+trs
 
 img
@@ -71,6 +80,20 @@ a
 
 .section-title
 	font-size: 40px
-	color: #F6AF47
+	color: $accent
 	text-align: center
+	+robCond-light
 	font-weight: 300
+
+.list-dotted
+	li
+		position: relative
+	li::before
+		position: absolute
+		left: 1px
+		top: 8px
+		border-radius: 50%
+		content: ''
+		height: 3px
+		width: 3px
+		background-color: #747377

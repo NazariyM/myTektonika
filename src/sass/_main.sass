@@ -13,18 +13,17 @@
    height: 68px
    &--header
       float: left
-.contact
+.connect
    font-size: 0
    &--header
       float: right
    &__btn
       margin-right: 25px
       padding: 5px 10px
-      border-radius: 7px
       background: #f6af47
       font-size: 13px
-      font-weight: 400
       color: #fff
+      +robCond-reg
       +trs
       &:hover
          background-color: darken(#f6af47, 10)
@@ -41,7 +40,7 @@
       +trs
       &:hover
          background: #A0A0A0
-      &:hover .contact__icon
+      &:hover .connect__icon
          color: #fff
    &__icon
       position: absolute
@@ -53,7 +52,7 @@
       display: inline-block
       vertical-align: middle
       font-size: 14px
-      font-weight: 300
+      +robCond-reg
       color: #fff
 
 .nav
@@ -67,6 +66,7 @@
       font-size: 16px
       color: #fff
       text-transform: uppercase
+      letter-spacing: 0.5px
       +trs
       &::after
          opacity: 0
@@ -97,6 +97,8 @@
 
 .screen-slider
    position: relative
+   overflow: hidden
+   height: 550px
    z-index: 1
    &__item
       &:nth-child(1) ~ &
@@ -107,21 +109,20 @@
    img
       display: block
       width: 100%
-      height: 580px
    &__text
       position: absolute
-      top: 250px
+      top: 35%
       left: 50%
-      margin-left: -390px
-      max-width: 780px
+      transform: translateX(-50%)
       font-size: 40px
       color: #fff
-      font-weight: 400
       text-align: center
       z-index: 2
+      text-shadow: 0px 0px 12px rgba(0,0,0,0.33)
+      +robCond-reg
    &__arrow
       position: absolute
-      bottom: 50px
+      bottom: 30px
       height: 32px
       width: 32px
       border-radius: 50%
@@ -144,38 +145,35 @@
          color: #E2E2E2
 
 .about
-   padding: 40px 0 0
+   padding: 35px 0 0
    &__sub-title
-      max-width: 480px
-      margin: 20px auto 35px
+      max-width: 485px
+      margin: 20px auto 40px
    &__list
       float: left
       width: 50%
-      padding: 0 15px
+      padding: 0 30px
+      font-size: 18px
+      text-align: left
       li
          position: relative
          padding-left: 10px
          margin-bottom: 25px
-      li::before
-         position: absolute
-         left: 0
-         top: 8px
-         border-radius: 50%
-         content: ''
-         height: 4px
-         width: 4px
-         background-color: #747377
    &__block
-      padding: 70px 0 55px
+      padding: 65px 0 55px
       background: #F0F0F0
    &__row
+      margin: 0 -15px
       text-align: center
       font-size: 0
       +clr
+      &--list
+         margin: 0 -30px 60px
    &__item
       width: 33%
       display: inline-block
       vertical-align: top
+      padding: 0 15px
       margin-bottom: 30px
       text-align: center
    &__item-pic
@@ -187,17 +185,20 @@
       margin-bottom: 10px
       font-size: 20px
    &__item-text
+      margin: 0 auto
+      max-width: 210px
       font-size: 15px
    &__item-list
+      padding-left: 60px
       font-size: 15px
       text-align: left
+      li
+         padding-left: 10px
 
 .presentation
-   padding: 15px 0 25px
+   padding: 35px 0 40px
    background: #A0A0A0
    text-align: center
-   &__title
-      color: $accent
    &__load
       margin-top: 20px
       display: inline-block
@@ -207,7 +208,7 @@
    &__load:hover &__load-icon
       background: #7F7F7F
    &__load-icon
-      margin-bottom: 10px
+      margin-bottom: 15px
       width: 92px
       height: 92px
       border-radius: 50%
@@ -224,20 +225,57 @@
       +trs
 
 .work
-   padding: 15px 0
-   &__title
-      color: $accent
-   &__iconfile
-      position: relative
-      &::after
-         content: ''
-         position: absolute
-         top: 50%
-         width: 100%
-         height: 1px
-         background: #A0A0A0
-         z-index: 1
-   &__iconfile-pic
+   padding: 45px 0 35px
+   &__sub-title
+      max-width: 700px
+      margin: 25px auto 0
+      text-align: left
+   &__row
+      margin: 0 -30px
+      font-size: 0
+   &__step
+      display: inline-block
+      vertical-align: top
+      width: 50%
+      padding: 0 30px
+      margin-bottom: 45px
+      text-align: center
+      &:nth-child(5) .work__step-text,
+      &:nth-child(6) .work__step-text
+         text-align: left
+   &__step-number
+      margin: 0 auto 25px
+      width: 60px
+      height: 60px
+      line-height: 60px
+      color: #C7B299
+      font-size: 30px
+      border: 1px solid #A0A0A0
+      border-radius: 50%
+   &__step-title
+      margin-bottom: 30px
+      font-size: 30px
+      font-weight: 300
+      color: #C7B299
+      +robCond-light
+   &__step-text
+      font-size: 18px
+      text-align: justify
+      line-height: 1.3
+      & + &
+         margin-top: 15px
+
+.decor
+   position: relative
+   &::after
+      content: ''
+      position: absolute
+      top: 50%
+      width: 100%
+      height: 1px
+      background: #A0A0A0
+      z-index: 1
+   &__pic
       position: relative
       z-index: 2
       margin: 0 auto
@@ -260,3 +298,191 @@
       svg
          height: 90px
          width: 90px
+   &--work
+      margin:  40px 0
+
+.what-if
+   padding: 30px 0 60px
+   background: #A0A0A0
+   text-align: center
+   &__title
+      margin-bottom: 30px
+   &__text
+      color: #fff
+      &:last-of-type
+         margin-bottom: 20px
+   &__link
+      text-decoration: underline
+      color: #fff
+      span
+         +robCond-bold
+      &:hover
+         text-decoration: none
+         color: $accent
+
+.sect
+   padding: 50px 0 70px
+   &__row
+      margin: 0 -35px
+      font-size: 0
+   &__title
+      margin-bottom: 60px
+   &__item
+      display: inline-block
+      vertical-align: top
+      margin: 0 35px 20px
+      width: calc(20% - 70px)
+      font-size: 18px
+      text-align: center
+   &__pic
+      margin: 0 auto 20px
+      width: 120px
+      height: 120px
+      border-radius: 50%
+      overflow: hidden
+      +trs
+      svg
+         width: 120px
+         height: 120px
+      img
+         height: 100%
+         object-fit: cover
+   &--direct
+      .sect__pic
+         border: 2px solid $accent
+      .sect__item:hover .sect__pic
+         background: #747377
+   &--tech
+      background: #F6AF47
+      .sect__pic
+         background: #747377
+      .sect__title
+         color: #ffffff
+      .sect__item
+         color: #ffffff
+   &--price
+      .sect__pic
+         border: 2px solid $accent
+         background: #f0f0f0
+      .sect__item:hover .sect__pic
+         background: #747377
+   &--portfolio
+      background: #A0A0A0
+      .sect__item
+         color: #ffffff
+
+.write
+   padding: 45px 0
+   &__descr
+      margin: 35px 0 20px
+      text-align: center
+   &__form
+      max-width: 500px
+      margin: 0 auto
+      &-field
+      &-input
+         margin-bottom: 5px
+         width: 100%
+         padding: 0 10px
+         border-radius: 5px
+         border: 1px solid #C4C4C4
+         font-size: 16px
+         background: #f2f2f2
+         line-height: 31px
+         height: 31px
+         +trs
+         +placeholder(#d2d2d2)
+         +robCond-light
+         &::-moz-placeholder
+            +trs
+         &::-webkit-input-placeholder
+            +trs
+         &:-ms-input-placeholder
+            +trs
+         &:focus
+            background: #fff
+         &:hover
+            border-color: #6b6b6b
+            background: #fff
+            +placeholder(#6b6b6b)
+         &--message
+            height: 80px
+            resize: none
+      &-label
+         display: block
+         padding-bottom: 3px
+         font-size: 16px
+         color: #6B6B6B
+         +robCond-reg
+      &-send
+         display: block
+         max-width: 300px
+         width: 100%
+         padding: 0 15px
+         margin: 10px auto 0
+         line-height: 30px
+         background: $accent
+         color: #ffffff
+         border-radius: 10px
+         &:hover
+            background: #a0a0a0
+
+.scroll-top
+   display: block
+   margin: 60px auto 0
+   background: #a0a0a0
+   color: #3c3c3c
+   font-size: 13px
+   width: 130px
+   height: 30px
+   line-height: 30px
+   text-align: center
+   +robCond-reg
+   &:hover
+      background: $accent
+      color: #fff
+
+.contact
+   padding: 40px 0 30px
+   background: #747377
+   &__title
+      font-size: 30px
+      color: #fff
+   &__block
+      margin: 0 -15px
+      font-size: 0
+      text-align: center
+   &__item
+      display: inline-block
+      vertical-align: top
+      margin-bottom: 30px
+      width: 33.33333%
+      padding: 0 15px
+      font-size: 0
+      color: #ffffff
+      &:nth-child(4),
+      &:nth-child(5)
+         width: 50%
+         .contact__item-pic
+            vertical-align: top
+      .icon
+         font-size: 50px
+         +vcenter
+      a:hover
+         text-decoration: underline
+   &__item-pic
+      position: relative
+      display: inline-block
+      vertical-align: middle
+      margin-right: 15px
+      height: 50px
+      width: 50px
+      border-radius: 50%
+      border: 1px solid #fff
+      overflow: hidden
+   &__item-text
+      display: inline-block
+      vertical-align: middle
+      width: calc(100% - 65px)
+      text-align: left
+      font-size: 16px

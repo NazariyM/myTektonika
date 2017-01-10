@@ -5,9 +5,12 @@
 	font-weight: normal
 	font-style: normal
 
-$icon-arrow: "\EA01"
-$icon-mail: "\EA02"
-$icon-phone: "\EA03"
+$icon-address: "\EA01"
+$icon-arrow: "\EA02"
+$icon-mail: "\EA03"
+$icon-people: "\EA04"
+$icon-phone: "\EA05"
+$icon-time: "\EA06"
 
 
 %icon
@@ -24,9 +27,15 @@ $icon-phone: "\EA03"
 	@extend %icon
 	display: inline-block
 
+.icon-address:before
+	content: $icon-address
 .icon-arrow:before
 	content: $icon-arrow
 .icon-mail:before
 	content: $icon-mail
+.icon-people:before
+	content: $icon-people
 .icon-phone:before
 	content: $icon-phone
+.icon-time:before
+	content: $icon-time

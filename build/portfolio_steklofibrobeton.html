@@ -1,0 +1,210 @@
+<!doctype html>
+<html>
+<head>
+   <meta charset="utf-8">
+   <title>Тектоника. Производственно-строительная компания</title>
+   <meta name="viewport" content="width=device-width, initial-scale=1">
+   <meta name="format-detection" content="telephone=no">
+   <meta name="theme-color" content="#fff">
+   <link rel="stylesheet" media="all" href="css/style.css">
+   <!--[if IE]>
+   <script src="js/lib/html5shiv.js"></script>
+   <![endif]-->
+   <script src="https://api-maps.yandex.ru/2.1/?lang=ru_RU"></script>
+</head>
+<body>
+
+<div class="wrapper">
+   <header class="header">
+      <div class="container">
+         <a class="logo logo--header" href="#">
+            <img src="img/logo.svg" alt="Тектоника">
+         </a>
+         <div class="connect connect--header">
+            <a href="mailto:info@tektonika-psk.ru" class="connect__link"><i class="connect__icon icon-mail"></i></a>
+            <a href="tel:74996476707" class="connect__link"><i class="connect__icon icon-phone"></i></a>
+            <a href="tel:74996476707" class="connect__phone">7 (499) 647-67-07</a>
+         </div>
+         <div class="call-me call-me--header">
+            <a href="#" class="call-me__btn btn js-call-btn">Перезвоните мне</a>
+               <div class="call-me__popup js-call-popup">
+                  <div class="call-me__popup-inner">
+                     <div class="call-me__popup-title">Пожалуйста заполните поля:</div>
+                     <form class="call-me__popup-form" action="#">
+                        <div class="call-me__popup-field">
+                           <input type="name" name="name" required placeholder="Имя">
+                        </div>
+                        <div class="call-me__popup-field">
+                           <input type="text" name="telephone" required placeholder="Номер телефона">
+                        </div>
+                        <button class="call-me__popup-btn btn" type="submit">Перезвонить</button>
+                     </form>
+                     <div class="call-me__popup-close icon-close js-call-popup-close"></div>
+                  </div>
+               </div>
+         </div>
+         <nav class="nav nav--header">
+            <a href="#">О нас</a>
+            <a href="#">Направления</a>
+            <a href="#">Продукция</a>
+            <a href="#">Технологии</a>
+            <a href="#">Портфолио</a>
+            <a href="#">Цены</a>
+            <a href="#">Контакты</a>
+         </nav>
+      </div>
+   </header>
+
+   <main class="main">
+      <div class="screen">
+         <div class="screen-slider screen-slider--portfolio js-screen-slider">
+            <div class="screen-slider__item">
+               <img src="img/content/steklofibrobeton-1.jpg" alt="img">
+            </div>
+            <div class="screen-slider__item">
+               <img src="img/content/steklofibrobeton-2.jpg" alt="img">
+            </div>
+            <div class="screen-slider__item">
+               <img src="img/content/steklofibrobeton-3.jpg" alt="img">
+            </div>
+            <div class="screen-slider__item">
+               <img src="img/content/steklofibrobeton-4.jpg" alt="img">
+            </div>
+            <div class="screen-slider__item">
+               <img src="img/content/steklofibrobeton-5.jpg" alt="img">
+            </div>
+         </div>
+      </div>
+      <section class="portfolio">
+         <div class="container">
+            <h2 class="portfolio__title">Портфолио</h2>
+            <div class="portfolio__sub-title section-title">Стеклофибробетон</div>
+            <div class="decor decor--portfolio">
+               <div class="decor__pic">
+                  <svg>
+                     <use xlink:href="img/content-sprite.svg#column"></use>
+                  </svg>
+               </div>
+            </div>
+            <div class="portfolio__pics">
+               <div class="portfolio__pics-title">Частный дом в КП «Резиденция Бенелюкс»</div>
+               <div class="portfolio__pics-inner js-portfolio-pics">
+                  <a href="img/content/portf-ben-1.jpg" class="portfolio__pics-img">
+                     <img class="portfolio__pics-img" src="img/content/portf-ben-1.jpg" alt="img">
+                  </a>
+                  <a href="img/content/portf-ben-2.jpg" class="portfolio__pics-img"></a>
+                  <a href="img/content/portf-ben-3.jpg" class="portfolio__pics-img"></a>
+                  <a href="img/content/portf-ben-4.jpg" class="portfolio__pics-img"></a>
+                  <a href="img/content/portf-ben-5.jpg" class="portfolio__pics-img"></a>
+                  <a href="img/content/portf-ben-6.jpg" class="portfolio__pics-img"></a>
+                  <a href="img/content/portf-ben-7.jpg" class="portfolio__pics-img"></a>
+                  <a href="img/content/portf-ben-8.jpg" class="portfolio__pics-img"></a>
+               </div>
+            </div>
+         </div>
+      </section>
+   </main>
+
+</div>
+<footer class="footer">
+   <section class="contact">
+      <div class="container">
+         <div class="contact__block">
+            <div class="contact__item">
+               <div class="contact__item-pic">
+                  <i class="icon-address icon"></i>
+               </div>
+               <div class="contact__item-text">Адрес: МО: д. Еремино,<br> д. 100, офис 11.</div>
+            </div>
+            <div class="contact__item">
+               <div class="contact__item-pic">
+                  <i class="icon-phone icon"></i>
+               </div>
+               <div class="contact__item-text">
+                  <a href="tel:+74996476707">+ 7 (499) 647-67-07</a>
+               </div>
+            </div>
+            <div class="contact__item">
+               <div class="contact__item-pic">
+                  <i class="icon-mail icon"></i>
+               </div>
+               <div class="contact__item-text">
+                  <a href="mailto:info@tektonika-psk.ru">info@tektonika-psk.ru</a>
+               </div>
+            </div>
+            <div class="contact__item">
+               <div class="contact__item-pic">
+                  <i class="icon-people icon"></i>
+               </div>
+               <div class="contact__item-text">Вы можете обратиться к нам по телефону, по электронной почте,
+                  договориться о встрече в нашем офисе или на производстве. Будем рады помочь вам и ответить на все ваши
+                  вопросы.
+               </div>
+            </div>
+            <div class="contact__item">
+               <div class="contact__item-pic">
+                  <i class="icon-time icon"></i>
+               </div>
+               <div class="contact__item-text">Пожалуйста, предварительно резервируйте время встречи в офисе по
+                  телефону.
+               </div>
+            </div>
+         </div>
+         <h2 class="contact__title section-title">Карта проезда</h2>
+      </div>
+      <div class="contact__map">
+         <div class="contact__info">
+            <a class="logo-black logo-black--contact" href="#">
+               <img src="img/logo-black.svg" alt="Тектоника">
+            </a>
+            <div class="contact__info-descr">
+               <div class="contact__info-field">
+                  <div class="contact__info-label">Адрес:</div>
+                  <div class="contact__info-text">Московская обл., дер. Еремино, д. 100, офис 11</div>
+               </div>
+               <div class="contact__info-field">
+                  <div class="contact__info-label">Схема проезда: <a href="#">скачать в Png,</a> или <a href="#">формате
+                     Pdf</a></div>
+               </div>
+               <div class="contact__info-field">
+                  <div class="contact__info-label">График работы:</div>
+                  <div class="contact__info-text">пн-сб: с 9:00 до 19:00, сб: с 10:00 до 17:00</div>
+               </div>
+               <div class="contact__info-field">
+                  <div class="contact__info-label">Координаты:</div>
+                  <div class="contact__info-text">55.73783478, 38.07355283</div>
+               </div>
+            </div>
+         </div>
+         <div id="map" class="contact__map-body"></div>
+      </div>
+   </section>
+
+   <section class="footer__bottom">
+      <div class="container">
+         <div class="footer__nav">
+            <a href="#" class="footer__nav-link">Главная</a>
+            <a href="#" class="footer__nav-link">О нас</a>
+            <a href="#" class="footer__nav-link">Направления</a>
+            <a href="#" class="footer__nav-link">Продукция</a>
+            <a href="#" class="footer__nav-link">Технологии</a>
+            <a href="#" class="footer__nav-link">Портфолио</a>
+            <a href="#" class="footer__nav-link">А что если?</a>
+            <a href="#" class="footer__nav-link">Цены</a>
+            <a href="#" class="footer__nav-link">Контакты</a>
+         </div>
+         <a href="#" class="footer__policy">Политика<br> конфиденциальности</a>
+         <a href="#" class="logo-mini--footer logo-mini">
+            <img src="img/logo-mini.svg" alt="Тектоника">
+         </a>
+         <span class="footer__copy">&copy;2016 Тектоника</span>
+      </div>
+   </section>
+
+</footer>
+
+
+
+<script src="js/app.js"></script>
+</body>
+</html>

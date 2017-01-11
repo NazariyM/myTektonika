@@ -23,7 +23,6 @@ $(document).ready(function () {
             e.preventDefault();
 
             $(this).next(callPopup).fadeIn();
-            $('body').addClass('is-locked');
 
         });
 
@@ -31,17 +30,17 @@ $(document).ready(function () {
             e.preventDefault();
 
             $(this).parents().find(callPopup).fadeOut();
-            $('body').removeClass('is-locked');
         });
 
-        $(document).click(function(event) {
-            if(!$(event.target).closest(callPopup).length) {
-                if($(callPopup).is(":visible")) {
-                    $(callPopup).hide();
-                }
-            }
-        })
+    })();
 
+    // portfolio gallery
+
+    (function () {
+        $('.js-portfolio-pics').magnificPopup({
+            delegate: 'a',
+            type: 'image'
+        });
     })();
 
     // screen slider

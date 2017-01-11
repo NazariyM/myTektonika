@@ -170,6 +170,9 @@
    overflow: hidden
    height: 550px
    z-index: 1
+   &--portfolio
+      .screen-slider__arrow
+         display: none!important
    &__item
       &:nth-child(1) ~ &
          display: none
@@ -366,10 +369,21 @@
       &::after
          right: -37px
       svg
-         height: 90px
-         width: 90px
+         height: 100%
+         width: 100%
    &--work
       margin:  40px 0
+   &--portfolio
+      margin: 30px 0 70px
+      &::after
+         width: 70%
+         left: 50%
+         transform: translateX(-50%)
+      .decor__pic
+         height: 70px
+         width: 70px
+         &::before, &::after
+            top: 32px
 
 .what-if
    padding: 30px 0 60px
@@ -616,3 +630,11 @@
                color: $accent
       &-text
          +robCond-reg
+
+// STEKLOFIBROBETON PAGE
+.portfolio
+   padding: 40px 0
+   &__title
+      margin-bottom: 15px
+      text-align: center
+      font-size: 18px

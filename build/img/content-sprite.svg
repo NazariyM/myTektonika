@@ -117,6 +117,35 @@
 	</g>
 </g>
 </symbol>
+
+	<symbol version="1.1" id="column" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
+	 viewBox="0 0 141.7 141.7" enable-background="new 0 0 141.7 141.7" xml:space="preserve">
+<g>
+	<circle fill="none" cx="70.9" cy="70.9" r="70.9"/>
+	<g>
+		<g>
+			<path fill="none" stroke="#AEAFB2" stroke-width="2.8346" stroke-miterlimit="10" d="M62,92.5h-8.9V65.9c0-2.4,2-4.4,4.4-4.4
+				s4.4,2,4.4,4.4V92.5z"/>
+			<path fill="none" stroke="#AEAFB2" stroke-width="2.8346" stroke-miterlimit="10" d="M70.9,92.5H62V65.9c0-2.4,2-4.4,4.4-4.4
+				c2.4,0,4.4,2,4.4,4.4V92.5z"/>
+			<path fill="none" stroke="#AEAFB2" stroke-width="2.8346" stroke-miterlimit="10" d="M79.7,92.5h-8.9V65.9c0-2.4,2-4.4,4.4-4.4
+				s4.4,2,4.4,4.4V92.5z"/>
+			<path fill="none" stroke="#AEAFB2" stroke-width="2.8346" stroke-miterlimit="10" d="M88.6,92.5h-8.9V65.9c0-2.4,2-4.4,4.4-4.4
+				c2.4,0,4.4,2,4.4,4.4V92.5z"/>
+		</g>
+		<polyline fill="none" stroke="#AEAFB2" stroke-width="2.8346" stroke-miterlimit="10" points="88.6,63.3 88.6,92.5 53.1,92.5
+			53.1,63.3 		"/>
+		<path fill="none" stroke="#AEAFB2" stroke-width="2.8346" stroke-linecap="round" stroke-miterlimit="10" d="M90.6,56.4
+			c0.4,1.8,3.5,2.6,5.1,0.9c2.1-2.1,2.1-5.4,0-7.5c-2.6-2.6-6.8-2.6-9.4,0c-3.2,3.2-3.2,8.5,0,11.7c4,4,10.6,4,14.6,0
+			c5.1-5.1,5.1-13.2,0-18.3c-3.2-3.2-7.4-4.8-11.6-4.7c-4.1,0.1-18.5,0-18.5,0s-14.4,0.1-18.5,0c-4.2-0.1-8.4,1.5-11.6,4.7
+			c-5.1,5.1-5.1,13.2,0,18.3c4,4,10.6,4,14.6,0c3.2-3.2,3.2-8.5,0-11.7c-2.6-2.6-6.8-2.6-9.4,0c-2.1,2.1-2.1,5.4,0,7.5
+			c1.7,1.7,4.7,0.9,5.1-0.9"/>
+		<polygon fill="none" stroke="#AEAFB2" stroke-width="2.8346" stroke-miterlimit="10" points="94.3,96.5 94.3,92.5 47.4,92.5
+			47.4,96.5 41.9,96.5 41.9,103.3 99.8,103.3 99.8,96.5 		"/>
+	</g>
+</g>
+</symbol>
+
 <symbol version="1.1" id="file" xmlns="http://www.w3.org/2000/svg" xmlns:xlink="http://www.w3.org/1999/xlink" x="0px" y="0px"
 	 viewBox="0 0 141.7 141.7" enable-background="new 0 0 141.7 141.7" xml:space="preserve">
 <circle fill="none" cx="70.9" cy="70.9" r="70.9"/>

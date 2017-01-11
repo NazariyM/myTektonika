@@ -1,18 +1,18 @@
-$(document).ready(function() {
+$(document).ready(function () {
 
-   // Clear placeholder
-   (function () {
-      var el = $('input, textarea');
-      el.focus(function () {
-         $(this).data('placeholder', $(this).attr('placeholder'));
-         $(this).attr('placeholder', '');
-      });
-      el.blur(function () {
-         $(this).attr('placeholder', $(this).data('placeholder'));
-      });
-   })();
+    // Clear placeholder
+    (function () {
+        var el = $('input, textarea');
+        el.focus(function () {
+            $(this).data('placeholder', $(this).attr('placeholder'));
+            $(this).attr('placeholder', '');
+        });
+        el.blur(function () {
+            $(this).attr('placeholder', $(this).data('placeholder'));
+        });
+    })();
 
-   // screen slider
+    // screen slider
     $('.js-screen-slider').slick({
         fade: true,
         dots: false,
@@ -57,9 +57,8 @@ $(document).ready(function() {
     })();
 
     // map
-
     (function () {
-        var myLatLng = [56.01421991876897, 37.552129938990376];
+        var myLatLng = [56.01117090192192, 37.54865651284954];
         ymaps.ready(init);
         var myMap;
 
@@ -70,9 +69,20 @@ $(document).ready(function() {
             }, {
                 searchControlProvider: 'yandex#search'
             }),
-                myPlacemark = new ymaps.Placemark(myMap.getCenter(), {
-                    hintContent: 'Русский Терем'
+                myPlacemark = new ymaps.Placemark([56.01405587269873, 37.552094416412814], {
+                    balloonContentHeader: "ООО «ПСК Тектоника»",
+                    balloonContentBody: "МО, Дмитровское шоссе, дер. Еремино, д. 100. офис 11.",
+                    balloonContentFooter: "www.tektonika-psk.ru",
+                    hintContent: "Мы здесь!"
                 });
+
+            myPlacemark.events.add('click', function (e) {
+                var baloonCenter = [56.01405587269873, 37.552094416412814];
+
+                myMap.setCenter(baloonCenter);
+                myMap.panTo(baloonCenter);
+            });
+
             myMap.geoObjects.add(myPlacemark);
             myMap.behaviors.disable('scrollZoom');
             myMap.controls.remove('searchControl');
@@ -82,30 +92,22 @@ $(document).ready(function() {
         }
     })();
 
-    // (function () {
-    //     var myLatLng = [56.01421991876897, 37.552129938990376],
-    //         myPlacemark = new YMaps.Placemark(new YMaps.GeoPoint(56.014036705382004, 37.55207205754845));
-    //     YMaps.ready(initMap);
-    //     var myMap;
-    //
-    //     myPlacemark.name = "Москва";
-    //     myPlacemark.description = "Столица Российской Федерации";
-    //
-    //     function initMap() {
-    //         myMap = new YMaps.Map("map", {
-    //             center: myLatLng,
+
+    // function init() {
+    //     var myMap = new ymaps.Map("map", {
+    //             center: [56.01093048568379, 37.54895692025922],
     //             zoom: 15
     //         }, {
     //             searchControlProvider: 'yandex#search'
+    //         }),
+    //         myPlacemark = new ymaps.Placemark([56.01405587269873, 37.552094416412814], {
+    //             balloonContentHeader: "ООО «ПСК Тектоника»",
+    //             balloonContentBody: "МО, Дмитровское шоссе, дер. Еремино, д. 100. офис 11.",
+    //             balloonContentFooter: "www.tektonika-psk.ru",
+    //             hintContent: "Мы здесь!"
     //         });
+    //     myMap.geoObjects.add(myPlacemark);
     //
-    //         // map.addOverlay(myPlacemark);
-    //         // myMap.behaviors.disable('scrollZoom');
-    //         // myMap.controls.remove('searchControl');
-    //         // myMap.controls.remove('trafficControl');
-    //         // myMap.controls.remove('typeSelector');
-    //         // myMap.controls.remove('fullscreenControl');
-    //     }
-    // })();
+    // }
 
 });

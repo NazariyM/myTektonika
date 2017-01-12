@@ -1,4 +1,65 @@
 $(document).ready(function () {
+    // nav scroll
+    (function () {
+        var nav = $('.js-nav'),
+            navItem = nav.children(),
+            header  = $('.js-header');
+
+        navItem.on('click', function (e) {
+            e.preventDefault();
+            var el = $(this).attr('href');
+
+            initNavScroll();
+
+            $(window).resize(function () {
+                initNavScroll();
+            });
+
+            function initNavScroll () {
+                if ($(window).width() >= 1024) {
+                    $('html, body').animate({scrollTop: $(el).offset().top -110}, 1200);
+                    $('.js-header').addClass('header--fixed');
+                    return false;
+                }   else {
+                    header.removeClass('header--fixed');
+                    return false;
+                }
+            };
+
+
+            // else {
+            //     $('html, body').animate({scrollTop: $(el).offset().top -142}, 1200);
+            //     return false;
+            // }
+        });
+    })();
+    // nav mobile
+    // (function() {
+    //     var toggleBtn = $('.js-hamburger'),
+    //         nav = $('.js-nav'),
+    //         scrollBtn = $('.js-scroll-btn');
+    //
+    //     toggleBtn.on('click', function() {
+    //         $(this).toggleClass('is-active');
+    //         nav.toggleClass('is-active');
+    //     });
+
+        // initNavTransition();
+
+        // $(window).resize(function() {
+        //     initNavTransition();
+        //     toggleBtn.removeClass('is-active');
+        //     nav.removeClass('is-active');
+        // });
+
+        // function initNavTransition() {
+        //     if ($(window).width() <= 479) {
+        //         nav.css('transition', 'all 0.5s');
+        //     } else {
+        //         nav.css('transition', 'none');
+        //     }
+        // }
+    // })();
 
     // Clear placeholder
     (function () {
@@ -17,12 +78,26 @@ $(document).ready(function () {
     (function () {
         var callBtn = $('.js-call-btn'),
             callClose = $('.js-call-popup-close'),
-            callPopup = $('.js-call-popup');
+            callPopupInner = $('.call-me__popup-inner'),
+            callPopup = $('.js-call-popup'),
+            header = $('.js-header');
+
+        callPopup.click(function(event) {
+            if($(event.target).children(callPopupInner).length) {
+                if(callPopup.is(":visible")) {
+                    callPopup.fadeOut();
+                    $('html').removeClass('is-locked');
+                    header.removeClass('is-locked--header');
+                }
+            }
+        });
 
         callBtn.on('click', function (e) {
             e.preventDefault();
 
             $(this).next(callPopup).fadeIn();
+            $('html').addClass('is-locked');
+            header.addClass('is-locked--header');
 
         });
 
@@ -30,8 +105,9 @@ $(document).ready(function () {
             e.preventDefault();
 
             $(this).parents().find(callPopup).fadeOut();
+            $('html').removeClass('is-locked');
+            header.removeClass('is-locked--header');
         });
-
     })();
 
     // portfolio gallery
@@ -40,8 +116,19 @@ $(document).ready(function () {
             delegate: 'a',
             type: 'image',
             gallery: {
-                enabled: true
+                enabled: true,
+                tPrev: 'Предыдущее фото',
+                tNext: 'Следующее фото',
+                tCounter: '%curr% из %total%'
             }
+            // callbacks: {
+            //
+            //     buildControls: function() {
+            //         // re-appends controls inside the main container
+            //         this.contentContainer.append(this.arrowLeft.add(this.arrowRight));
+            //     }
+            //
+            // }
         });
     });
 
@@ -52,8 +139,8 @@ $(document).ready(function () {
         arrows: true,
         infinite: true,
         draggable: false,
-        // autoplay: true,
-        // autoplaySpeed: 2000,
+        autoplay: true,
+        autoplaySpeed: 2300,
         speed: 1000,
         slidesToShow: 1,
         slidesToScroll: 1,

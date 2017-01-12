@@ -117,6 +117,9 @@ a
 	height: 68px
 	&--header
 		float: left
+		+r(479)
+			float: none
+			margin: 0 auto
 
 .logo-black
 	display: block
@@ -129,3 +132,10 @@ a
 	&--footer
 		display: block
 		margin: 20px auto 20px
+
+.is-locked
+	overflow: hidden
+	margin-right: 17px
+	&--header
+		overflow: visible
+		right: 17px!important

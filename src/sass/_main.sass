@@ -1,17 +1,30 @@
 .header
-   position: fixed
-   left: 0
-   right: 0
-   z-index: 1000
    padding: 20px 0
    background-color: #747377
    box-shadow: inset 0px -4px 8px rgba(45, 45, 45, 0.4)
+   &.header--fixed
+      position: fixed
+      left: 0
+      right: 0
+      z-index: 1000
+   &__contacts
+      float: right
+      +r(479)
+         float: none
+         text-align: center
+         margin-top: 10px
 
 .call-me
    position: relative
    &--header
       float: right
       margin: 4px 25px 0 0
+      +r(767)
+         float: none
+         margin: 10px 0 0
+         text-align: right
+      +r(479)
+         text-align: center
    &__btn
       padding: 5px 10px
       background: #f6af47
@@ -36,13 +49,14 @@
       left: 50%
       z-index: 1001
       transform: translate(-50%, -50%)
-      padding: 28px 15px 15px
+      padding: 20px 15px 15px
       border-radius: 5px
       background: #fff
       box-shadow: 0 0 10px rgba(#000, .3)
    &__popup-title
       margin-bottom: 10px
       font-size: 17px
+      text-align: center
       +robCond-reg
    &__popup-close
       position: absolute
@@ -95,6 +109,8 @@
 
 .connect
    font-size: 0
+   +r(767)
+      float: none
    &--header
       float: right
    &__link
@@ -130,6 +146,12 @@
    &--header
       float: right
       margin-top: 20px
+      +r(1023)
+         float: none
+         clear: both
+         margin: 0
+         padding-top: 15px
+         text-align: center
    a
       position: relative
       display: inline-block
@@ -243,6 +265,7 @@
       &--list
          margin: 0 -30px 60px
    &__item
+      position: relative
       width: 33%
       display: inline-block
       vertical-align: top
@@ -254,6 +277,25 @@
    &__item-img
       width: 120px
       height: 120px
+      overflow: hidden
+      border-radius: 50%
+   &__item-svgfix
+      position: absolute
+      left: calc(50% - 60px)
+      height: 120px
+      width: 120px
+      border-radius: 50%
+      border: 19px solid #f6af47
+      &::before
+         position: absolute
+         content: ''
+         border-radius: 50%
+         border: 2px solid #fff
+         height: 84px
+         width: 84px
+         top: 0
+         left: calc(50% - 42px)
+
    &__item-title
       margin-bottom: 10px
       font-size: 20px
@@ -511,7 +553,7 @@
             background: #a0a0a0
 
 .footer
-   padding: 40px 0 30px
+   padding: 0 0 30px
    background: #747377
    color: #fff
    font-size: 18px
@@ -541,6 +583,7 @@
          text-decoration: underline
 
 .contact
+   padding-top: 40px
    &__title
       font-size: 30px
       color: #fff
@@ -640,3 +683,40 @@
       img
          width: 100%
          height: 100%
+
+// popup img settings
+.mfp-container
+   +rm(1025)
+      top: -100px
+.mfp-counter
+   position: absolute
+   top: 60px
+   right: 50%
+   transform: translateX(50%)
+   color: #fff
+   font-size: 14px
+   line-height: 18px
+   white-space: nowrap
+.mfp-image-holder .mfp-close
+   padding: 5px
+   top: -40px
+   right: -25px
+   width: auto
+   cursor: pointer!important
+//.mfp-arrow
+//   height: 50px
+//   width: 50px
+//   margin: 0
+//   top: auto
+//   bottom: -60px
+//   &::before, &::after
+//      margin: 0
+//      +vcenter
+//.mfp-arrow-right
+//   right: 100px
+//.mfp-arrow-left
+//   left: 100px
+.mfp-counter
+   font-size: 15px
+img.mfp-img
+   padding: 0

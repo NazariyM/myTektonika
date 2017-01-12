@@ -15,21 +15,22 @@
 <body>
 
 <div class="wrapper">
-   <header class="header">
+   <header class="header js-header">
       <div class="container">
          <a class="logo logo--header" href="#">
             <img src="img/logo.svg" alt="Тектоника">
          </a>
-         <div class="connect connect--header">
-            <a href="mailto:info@tektonika-psk.ru" class="connect__link"><i class="connect__icon icon-mail"></i></a>
-            <a href="tel:74996476707" class="connect__link"><i class="connect__icon icon-phone"></i></a>
-            <a href="tel:74996476707" class="connect__phone">7 (499) 647-67-07</a>
-         </div>
+         <div class="header__contacts">
+            <div class="connect connect--header">
+               <a href="mailto:info@tektonika-psk.ru" class="connect__link"><i class="connect__icon icon-mail"></i></a>
+               <a href="tel:74996476707" class="connect__link"><i class="connect__icon icon-phone"></i></a>
+               <a href="tel:74996476707" class="connect__phone">7 (499) 647-67-07</a>
+            </div>
          <div class="call-me call-me--header">
             <a href="#" class="call-me__btn btn js-call-btn">Перезвоните мне</a>
                <div class="call-me__popup js-call-popup">
                   <div class="call-me__popup-inner">
-                     <div class="call-me__popup-title">Пожалуйста заполните поля:</div>
+                     <div class="call-me__popup-title">Мы Вам перезвоним:</div>
                      <form class="call-me__popup-form" action="#">
                         <div class="call-me__popup-field">
                            <input type="name" name="name" required placeholder="Имя">
@@ -42,15 +43,16 @@
                      <div class="call-me__popup-close icon-close js-call-popup-close"></div>
                   </div>
                </div>
+            </div>
          </div>
-         <nav class="nav nav--header">
-            <a href="#">О нас</a>
-            <a href="#">Направления</a>
-            <a href="#">Продукция</a>
-            <a href="#">Технологии</a>
-            <a href="#">Портфолио</a>
-            <a href="#">Цены</a>
-            <a href="#">Контакты</a>
+         <nav class="nav nav--header js-nav">
+            <a href="#about">О нас</a>
+            <a href="#direct">Направления</a>
+            <a href = "javascript:void(0);">Продукция</a>
+            <a href="#tech">Технологии</a>
+            <a href="#portfolio">Портфолио</a>
+            <a href="#price">Цены</a>
+            <a href="#contact">Контакты</a>
          </nav>
       </div>
    </header>
@@ -92,7 +94,7 @@
             </div>
          </div>
       </div>
-      <section class="about">
+      <section id="about" class="about">
          <div class="container">
             <h2 class="about__title section-title">О нас</h2>
             <p class="about__sub-title">Производственно-строительная компания Тектоника образована путем слияния
@@ -138,6 +140,7 @@
                   </div>
                   <div class="about__item">
                      <div class="about__item-pic">
+                        <div class="about__item-svgfix"></div>
                         <svg class="about__item-img">
                            <use xlink:href="img/content-sprite.svg#about-2"></use>
                         </svg>
@@ -261,7 +264,7 @@
             <a class="what-if__link" href="#">Посмотреть весь список в разделе<br> <span>«Вопрос ответ»</span></a>
          </div>
       </section>
-      <section class="sect sect--direct">
+      <section id="direct" class="sect sect--direct">
          <div class="container">
             <h2 class="sect__title section-title">Направления</h2>
             <div class="sect__row">
@@ -308,9 +311,9 @@
             </div>
          </div>
       </section>
-      <section class="sect sect--tech">
+      <section id="tech" class="sect sect--tech">
          <div class="container">
-            <h2 class="sect__title section-title">Технологии</h2>
+            <h2  class="sect__title section-title">Технологии</h2>
             <div class="sect__row">
                <a href="#" class=" sect__item">
                   <div class="sect__pic">
@@ -351,7 +354,7 @@
             </div>
          </div>
       </section>
-      <section class="sect sect--price">
+      <section id="price" class="sect sect--price">
          <div class="container">
             <h2 class="sect__title section-title">Цены</h2>
             <div class="sect__row">
@@ -398,7 +401,7 @@
             </div>
          </div>
       </section>
-      <section class="sect sect--portfolio">
+      <section id="portfolio" class="sect sect--portfolio">
          <div class="container">
             <h2 class="sect__title section-title">Портфолио</h2>
             <div class="sect__row">
@@ -439,6 +442,7 @@
             </div>
          </div>
       </section>
+
       <section class="write">
          <div class="container">
             <h2 class="write__title section-title">Напишите нам</h2>
@@ -468,7 +472,7 @@
    </main>
 </div>
 <footer class="footer">
-   <section class="contact">
+   <section id="contact" class="contact">
       <div class="container">
          <div class="contact__block">
             <div class="contact__item">

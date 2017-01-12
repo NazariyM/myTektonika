@@ -29,8 +29,6 @@ $default-fonts: Arial, sans-serif
 =robCond-bold
 	font-family: RobotoCondensed-Bold, $default-fonts
 
-
-
 // base transition
 
 =trs
@@ -69,6 +67,21 @@ body
 	text-transform: uppercase
 	border-radius: 10px
 	+trs
+
+.btn-grey
+	display: block
+	margin: 60px auto 0
+	background: #a0a0a0
+	color: #3c3c3c
+	font-size: 13px
+	width: 130px
+	height: 30px
+	line-height: 30px
+	text-align: center
+	+robCond-reg
+	&:hover
+		background: $accent
+		color: #fff
 
 img
 	display: block

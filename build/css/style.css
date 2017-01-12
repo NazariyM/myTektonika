@@ -176,6 +176,9 @@ body { display: -webkit-box; display: -webkit-flex; display: -ms-flexbox; displa
 
 .btn { display: inline-block; vertical-align: middle; text-decoration: none; outline: none; text-transform: uppercase; border-radius: 10px; -webkit-transition: all 0.25s ease-in-out; transition: all 0.25s ease-in-out; }
 
+.btn-grey { display: block; margin: 60px auto 0; background: #a0a0a0; color: #3c3c3c; font-size: 13px; width: 130px; height: 30px; line-height: 30px; text-align: center; font-family: RobotoCondensed-Regular, Arial, sans-serif; }
+.btn-grey:hover { background: #F6AF47; color: #fff; }
+
 img { display: block; max-width: 100%; }
 
 a { color: inherit; text-decoration: none; }
@@ -292,7 +295,7 @@ a { color: inherit; text-decoration: none; }
 .decor__pic::after { right: -37px; }
 .decor__pic svg { height: 100%; width: 100%; }
 .decor--work { margin: 40px 0; }
-.decor--portfolio { margin: 30px 0 70px; }
+.decor--portfolio { margin: 30px 0 40px; }
 .decor--portfolio::after { width: 70%; left: 50%; -webkit-transform: translateX(-50%); -ms-transform: translateX(-50%); transform: translateX(-50%); }
 .decor--portfolio .decor__pic { height: 70px; width: 70px; }
 .decor--portfolio .decor__pic::before, .decor--portfolio .decor__pic::after { top: 32px; }
@@ -341,9 +344,6 @@ a { color: inherit; text-decoration: none; }
 .write__form-send { display: block; max-width: 300px; width: 100%; padding: 0 15px; margin: 10px auto 0; line-height: 30px; background: #F6AF47; color: #ffffff; border-radius: 10px; }
 .write__form-send:hover { background: #a0a0a0; }
 
-.scroll-top { display: block; margin: 60px auto 0; background: #a0a0a0; color: #3c3c3c; font-size: 13px; width: 130px; height: 30px; line-height: 30px; text-align: center; font-family: RobotoCondensed-Regular, Arial, sans-serif; }
-.scroll-top:hover { background: #F6AF47; color: #fff; }
-
 .footer { padding: 40px 0 30px; background: #747377; color: #fff; font-size: 18px; }
 .footer__bottom { padding: 20px 0 0; text-align: center; }
 .footer__copy { font-size: 13px; }
@@ -375,6 +375,11 @@ a { color: inherit; text-decoration: none; }
 
 .portfolio { padding: 40px 0; }
 .portfolio__title { margin-bottom: 15px; text-align: center; font-size: 18px; }
+.portfolio__pics { max-width: 670px; margin: 0 auto 35px; text-align: center; }
+.portfolio__pics-title { margin-bottom: 20px; }
+.portfolio__inner { font-size: 0; }
+.portfolio__pics-img { display: inline-block; vertical-align: middle; margin: 5px; width: 60px; height: 45px; }
+.portfolio__pics-img img { width: 100%; height: 100%; }
 @media screen and (max-width: 800px) and (orientation: landscape), screen and (max-height: 300px){
 
  /** * Remove all paddings around the image on small screen */

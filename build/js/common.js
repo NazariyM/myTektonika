@@ -35,13 +35,15 @@ $(document).ready(function () {
     })();
 
     // portfolio gallery
-
-    (function () {
-        $('.js-portfolio-pics').magnificPopup({
+    $('.js-portfolio-pics').each(function() {
+        $(this).magnificPopup({
             delegate: 'a',
-            type: 'image'
+            type: 'image',
+            gallery: {
+                enabled: true
+            }
         });
-    })();
+    });
 
     // screen slider
     $('.js-screen-slider').slick({

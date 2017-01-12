@@ -111,31 +111,101 @@ a
 		width: 3px
 		background-color: #747377
 
-.logo
-	display: block
-	width: 183px
-	height: 68px
-	&--header
-		float: left
-		+r(479)
-			float: none
-			margin: 0 auto
-
-.logo-black
-	display: block
-	width: 140px
-	height: 52px
-
-.logo-mini
-	width: 38px
-	height: 38px
-	&--footer
-		display: block
-		margin: 20px auto 20px
-
 .is-locked
 	overflow: hidden
 	margin-right: 17px
 	&--header
 		overflow: visible
 		right: 17px!important
+
+/* ===================================
+	 Hambruger
+	 =================================== */
+.hamburger
+	display: none
+	position: absolute
+	top: 0
+	right: 15px
+	z-index: 101
+	pointer-events: auto
+	-webkit-tap-highlight-color: transparent
+	cursor: pointer
+	transition-property: opacity, -webkit-filter
+	transition-property: opacity, filter
+	transition-property: opacity, filter, -webkit-filter
+	transition-duration: 0.15s
+	transition-timing-function: linear
+	font: inherit
+	color: inherit
+	text-transform: none
+	background-color: transparent
+	border: 0
+	overflow: visible
+	transition: all 0.5s
+	+r(767)
+		display: block
+	&__box
+		width: 35px
+		height: 30px
+		display: block
+		position: relative
+	&__inner
+		display: block
+		top: 50%
+		margin-top: -1px
+		width: 35px
+		height: 5px
+		background-color: #fff
+		position: absolute
+		transition-property: -webkit-transform
+		transition-property: transform
+		transition-property: transform, -webkit-transform
+		transition-duration: 0.15s
+		transition-timing-function: ease
+		&::before, &::after
+			width: 35px
+			height: 5px
+			background-color: #fff
+			position: absolute
+			transition-property: -webkit-transform
+			transition-property: transform
+			transition-property: transform, -webkit-transform
+			transition-duration: 0.15s
+			transition-timing-function: ease
+		&::before, &::after
+			content: ""
+			display: block
+		&::before
+			top: -11px
+		&::after
+			bottom: -11px
+	&.is-active &__inner
+		background-color: #fff
+	&.is-active &__inner:before,
+	&.is-active &__inner:after
+		background-color: #fff
+	&_spin &__inner
+		transition-duration: 0.3s
+		transition-timing-function: cubic-bezier(0.55, 0.055, 0.675, 0.19)
+		&::before
+			transition: top 0.1s 0.34s ease-in, opacity 0.1s ease-in
+		&::after
+			transition: bottom 0.1s 0.34s ease-in, -webkit-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19)
+			transition: bottom 0.1s 0.34s ease-in, transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19)
+			transition: bottom 0.1s 0.34s ease-in, transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19), -webkit-transform 0.3s cubic-bezier(0.55, 0.055, 0.675, 0.19)
+	&.is-active &__inner
+		-webkit-transform: rotate(225deg)
+		transform: rotate(225deg)
+		transition-delay: 0.14s
+		transition-timing-function: cubic-bezier(0.215, 0.61, 0.355, 1)
+		&::before
+			top: 0
+			opacity: 0
+			transition: top 0.1s ease-out, opacity 0.1s 0.14s ease-out
+		&::after
+			bottom: 0
+			-webkit-transform: rotate(-90deg)
+			transform: rotate(-90deg)
+			transition: bottom 0.1s ease-out, -webkit-transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1)
+			transition: bottom 0.1s ease-out, transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1)
+			transition: bottom 0.1s ease-out, transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1), -webkit-transform 0.3s 0.14s cubic-bezier(0.215, 0.61, 0.355, 1)

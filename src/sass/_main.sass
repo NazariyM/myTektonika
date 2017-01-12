@@ -1,4 +1,5 @@
 .header
+   position: relative
    padding: 20px 0
    background-color: #747377
    box-shadow: inset 0px -4px 8px rgba(45, 45, 45, 0.4)
@@ -9,10 +10,33 @@
       z-index: 1000
    &__contacts
       float: right
-      +r(479)
-         float: none
+      +r(767)
+         margin-right: 50px
+      +r(559)
+         float: left
+         width: 100%
          text-align: center
          margin-top: 10px
+         margin-right: 0
+
+.logo
+   display: block
+   width: 183px
+   height: 68px
+   &--header
+      float: left
+
+.logo-black
+   display: block
+   width: 140px
+   height: 52px
+
+.logo-mini
+   width: 38px
+   height: 38px
+   &--footer
+      display: block
+      margin: 20px auto 20px
 
 .call-me
    position: relative
@@ -23,8 +47,13 @@
          float: none
          margin: 10px 0 0
          text-align: right
-      +r(479)
-         text-align: center
+      +r(559)
+         display: inline-block
+         vertical-align: middle
+         margin: 0 0 0 10px
+      +r(376)
+         .call-me__btn
+            margin-top: 10px
    &__btn
       padding: 5px 10px
       background: #f6af47
@@ -109,10 +138,13 @@
 
 .connect
    font-size: 0
-   +r(767)
-      float: none
    &--header
       float: right
+      +r(767)
+         float: none
+      +r(559)
+         display: inline-block
+         vertical-align: top
    &__link
       position: relative
       display: inline-block
@@ -152,6 +184,22 @@
          margin: 0
          padding-top: 15px
          text-align: center
+      +r(767)
+         position: absolute
+         pointer-events: none
+         z-index: 1000
+         bottom: -288px
+         left: 0
+         right: 0
+         background-color: #747377
+         margin: -60px 0 0 0
+         padding-top: 15px
+         padding-bottom: 15px
+         transform: translateX(-100%)
+         transition: all 0.4s
+         &.is-active
+            pointer-events: auto
+            transform: translateX(0)
    a
       position: relative
       display: inline-block
@@ -160,6 +208,15 @@
       text-transform: uppercase
       letter-spacing: 0.5px
       +trs
+      +r(767)
+         display: block
+         color: #fff
+         font-size: 12px
+         padding-top: 10px
+         padding-bottom: 10px
+         font-weight: 700
+         &:hover
+            color: $accent
       &::after
          opacity: 0
          pointer-events: none
@@ -173,14 +230,27 @@
          height: 10px
          width: 120%
          +trs
+         +r(767)
+            display: none
+            content: none
       & + a
          margin-left: 22px
+         +r(767)
+            margin: 0
       &:hover
          color: #F0F0F0
       &:hover::after
          opacity: 1
 .screen
    position: relative
+   +r(1199)
+      margin-top: 111px
+   +r(1023)
+      margin-top: 142px
+   +r(767)
+      margin-top: 0
+   //+r(559)
+   //   margin-top: 150px
    &::after
       content: ''
       height: 30px
@@ -190,8 +260,11 @@
 .screen-slider
    position: relative
    overflow: hidden
-   height: 550px
+   height: 545px
    z-index: 1
+   &--home
+      +r(1439)
+         height: auto
    &--portfolio
       .screen-slider__arrow
          display: none!important
@@ -207,14 +280,21 @@
    &__text
       position: absolute
       top: 35%
-      left: 50%
-      transform: translateX(-50%)
+      left: 0
+      right: 0
       font-size: 40px
       color: #fff
       text-align: center
       z-index: 2
       text-shadow: 0px 0px 12px rgba(0,0,0,0.33)
       +robCond-reg
+      +r(1439)
+         top: 50%
+         transform: translateY(-50%)
+      +r(1023)
+         font-size: 30px
+      +r(767)
+         font-size: 18px
    &__arrow
       position: absolute
       bottom: 30px
@@ -231,10 +311,20 @@
       &::before, &::after
          +vcenter
       &--prev
+         bottom: 15px
          left: 45%
+         +r(1023)
+            left: 40%
+         +r(559)
+            left: 15px
          transform: rotate(180deg)
       &--next
+         bottom: 15px
          right: 45%
+         +r(1023)
+            right: 40%
+         +r(559)
+            right: 15px
       &:hover
          border-color: #E2E2E2
          color: #E2E2E2
@@ -244,12 +334,20 @@
    &__sub-title
       max-width: 485px
       margin: 20px auto 40px
+      +r(767)
+         font-size: 15px
+         max-width: none
+         text-align: center
    &__list
       float: left
       width: 50%
       padding: 0 30px
       font-size: 18px
       text-align: left
+      +r(767)
+         font-size: 15px
+         float: none
+         width: 100%
       li
          position: relative
          padding-left: 10px
@@ -257,6 +355,8 @@
    &__block
       padding: 65px 0 55px
       background: #F0F0F0
+      +r(1023)
+         padding: 35px 0 10px
    &__row
       margin: 0 -15px
       text-align: center
@@ -264,6 +364,8 @@
       +clr
       &--list
          margin: 0 -30px 60px
+         +r(767)
+            margin-bottom: 20px
    &__item
       position: relative
       width: 33%
@@ -272,6 +374,10 @@
       padding: 0 15px
       margin-bottom: 30px
       text-align: center
+      +r(767)
+         width: 50%
+      +r(559)
+         width: 100%
    &__item-pic
       margin-bottom: 30px
    &__item-img
@@ -295,7 +401,6 @@
          width: 84px
          top: 0
          left: calc(50% - 42px)
-
    &__item-title
       margin-bottom: 10px
       font-size: 20px
@@ -307,6 +412,10 @@
       padding-left: 60px
       font-size: 15px
       text-align: left
+      +r(1023)
+         max-width: 300px
+         margin: 0 auto
+         padding-left: 30px
       li
          padding-left: 10px
 
